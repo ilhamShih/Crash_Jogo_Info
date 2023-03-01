@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:name=".main.ActivityApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_lauch"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Crash_Jogo_Info">
+        <activity
+            android:name=".main.ActivityMain"
+            android:exported="true"
+            android:theme="@style/Theme.Crash_Jogo_Info.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.crash.blazecrash.appcrash.ActivityDefault"
+            android:configChanges="orientation|screenSize"
+            android:exported="false">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
+
+        <meta-data
+            android:name="com.yandex.metrica.push.default_notification_icon"
+            android:resource="@mipmap/ic_lauch"/>
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_lauch" />
+
+        <service
+            android:name=".push.FirebaseService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="100">
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.yandex.metrica.push.firebase.MetricaMessagingService"
+            tools:node="remove"/>
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+</manifest>

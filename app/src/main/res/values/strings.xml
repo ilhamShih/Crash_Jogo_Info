@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Crash Jogo Info</string>
+    <string name="menu_politica">política</string>
+    <string name="menu_email">email</string>
+
+    <string name="email_client_not">Cliente de e-mail ausente</string>
+    <string name="dialog_text">Descubra um novo mundo de emoção e aventura com o novo aplicativo.</string>
+    <string name="close_dialog">Prosseguir</string>
+    <string name="reset_error">recarregar</string>
+    <string name="exit_app">Repita para sair</string>
+</resources>
